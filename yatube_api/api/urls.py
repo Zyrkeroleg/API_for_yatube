@@ -1,15 +1,12 @@
-from posixpath import basename
-from django.db import router
 from django.urls import include, path
 from rest_framework.routers import SimpleRouter
-from rest_framework.authtoken import views
 from .views import CommentViewSet, PostViewSet, FollowViewSet, GroupViewSet
 
 router_v1 = SimpleRouter()
 
 router_v1.register('posts', PostViewSet, basename='posts')
 router_v1.register('posts/(?P<post_id>\\d+)/comments', CommentViewSet,
-                    basename='comments')
+                   basename='comments')
 router_v1.register('groups', GroupViewSet, basename='groups')
 router_v1.register('follow', FollowViewSet, basename='follow')
 
