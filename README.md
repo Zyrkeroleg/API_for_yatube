@@ -61,16 +61,19 @@ api/v1/posts/{post_id}/comments/ (GET, POST): Получить список вс
 api/v1/posts/{post_id}/comments/{comment_id}/ (GET, PUT, PATCH, DELETE): Получить, обновить, частично обновить или удалить комментарий к посту по id
 ```
 AUTH
+```
 api/v1/token/ (POST): Получить JWT-токен
 api/v1/token/refresh/ (POST): Обновить JWT-токен
 ```
 FOLLOW
 Подписки
+
 ```
 api/v1/follow/ (GET, POST): Получить список всех подписчиков или создать подписку
 ```
 GROUP
 Группы
+
 ```
 api/v1/group/ (GET, POST): Получить список всех групп или создать новую группу
 ```
